@@ -16,7 +16,8 @@ let game = function game(id) {
     return element
 }
 function compare(num1,num2,num3) {
-    display.innerText = squares[num1]+' Wins'
+        game = ""
+        display.innerText = squares[num1]+' Wins'
         display.style.color ='gold'
         document.getElementById("item"+num1).style.color ='gold'
         document.getElementById("item"+num2).style.color ='gold'
