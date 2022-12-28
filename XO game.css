@@ -43,7 +43,7 @@ span{
     cursor: pointer;
 }
 
-@media (max-width:950px) {
+@media (max-width:980px) {
     body{
         height: 100vh;
         background: rgb(48, 47, 47);
@@ -73,7 +73,7 @@ span{
         font-size: 90px;
         background: rgb(196, 81, 109);
         padding: 2px;
-        margin: 4px;
+        margin: 15px;
         float: left;
     }
           
