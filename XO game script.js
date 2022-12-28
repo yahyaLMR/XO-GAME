@@ -15,6 +15,11 @@ let game = function game(id) {
     winner();
     return element
 }
+function draw() {
+    display.innerText = 'DRAW'
+    setInterval(function(){display.innerText += "."},1000)
+    setTimeout(function(){location.reload()},4000)
+}
 function compare(num1,num2,num3) {
         game = ""
         display.innerText = squares[num1]+' Wins'
@@ -48,5 +53,7 @@ function winner() {
         compare(4,5,6)
     }else if (squares[7]==squares[8] && squares[8]==squares[9] && squares[9]!='') {
         compare(7,8,9)
+    }else if (squares[1]!='' && squares[2]!='' && squares[3]!='' && squares[4]!='' && squares[5]!='' && squares[6]!='' && squares[7]!='' && squares[8]!='' && squares[9]!=''){
+        draw()
     }
 }

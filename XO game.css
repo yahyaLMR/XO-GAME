@@ -50,30 +50,26 @@ span{
         color: aliceblue;
     }
     .container{
-        width: 80%;
+        width: 90%;
         margin: auto;
         padding-top: 30px;
         text-align: center;
-        
         font-family: system-ui;
         font-weight: 600;
-        
-        
-        
     }
 
     #display{
         width: 98.5%;
         background: rgb(196, 81, 109);
         margin-bottom: 2px;
-	margin-top: 40px;
-	font-size: 45px;
+	    margin-top: 40px;
+	    font-size: 45px;
        
     }
     
     .square{
-        width: 30%;
-        height: 25%;
+        width: 29%;
+        height: 23%;
         font-size: 90px;
         background: rgb(196, 81, 109);
         padding: 2px;
