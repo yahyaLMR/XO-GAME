@@ -6,75 +6,95 @@ body{
     height: 100vh;
     background: rgb(48, 47, 47);
     color: aliceblue;
+    display: flex;
+    align-items: center;
 }
-.container{
-    width: 50%;
-    margin: auto;
-    padding-top: 10px;
+/* Add a wrapper for the grid */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+    padding: 0 10px;
     text-align: center;
-    font-size: 45px;
+    font-size: 2.5rem;
     font-family: system-ui;
     font-weight: 600;
-    height: 80%;
-    
-    
-}
-span{
-    color: gold;
-}
-#display{
-    width: 98.5%;
-    background: rgb(196, 81, 109);
-    margin-bottom: 2px;
-   
+    height: auto;
 }
 
-.square{
-    width: 31%;
-    height: 34%;
-    font-size: 110px;
+#display {
+    width: 100%;
     background: rgb(196, 81, 109);
-    padding: 2px;
-    margin: 4px;
-    float: left;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding: 0.5em 0;
+    border-radius: 8px;
 }
-.square:hover{
+
+/* Add a grid wrapper for the squares */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+    min-height: 80px;
+    min-width: 80px;
+    background: rgb(196, 81, 109);
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    user-select: none;
+    aspect-ratio: 1 / 1;
+}
+
+.square:hover {
     background: #000;
     cursor: pointer;
 }
 
-@media (max-width:980px) {
-    body{
-        height: 100vh;
-        background: rgb(48, 47, 47);
-        color: aliceblue;
-    }
-    .container{
-        width: 90%;
-        margin: auto;
-        padding-top: 30px;
-        text-align: center;
-        font-family: system-ui;
-        font-weight: 600;
-    }
+span {
+    color: gold;
+}
 
-    #display{
-        width: 98.5%;
-        background: rgb(196, 81, 109);
-        margin-bottom: 2px;
-	    margin-top: 40px;
-	    font-size: 45px;
-       
+@media (max-width: 700px) {
+    .container {
+        font-size: 1.5rem;
+        padding-top: 10px;
     }
-    
-    .square{
-        width: 29%;
-        height: 23%;
-        font-size: 90px;
-        background: rgb(196, 81, 109);
-        padding: 2px;
-        margin: 15px;
-        float: left;
+    #display {
+        font-size: 1.2rem;
     }
-          
+    .grid {
+        max-width: 95vw;
+        gap: 5px;
+    }
+    .square {
+        font-size: 8vw;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        font-size: 1rem;
+    }
+    #display {
+        font-size: 1rem;
+    }
+    .square {
+        font-size: 12vw;
+        min-height: 30px;
+        min-width: 30px;
+    }
 }
